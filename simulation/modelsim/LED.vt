@@ -1,0 +1,36 @@
+`timescale 1ns / 1ps
+
+module tb;
+	reg clk;
+	wire[3:0] state;
+	wire[7:0] dout;
+	wire synced;
+	integer t;
+	parameter maxt = 600;
+	integer dumpf;
+	
+	initial begin
+		clk = 0;
+		t = 0;
+		dumpf = $fopen("dump.txt", "w");
+	end
+	
+//	initial #1000 $finish;
+	
+	always #(10) clk <= ~clk;
+	
+	LED led(clk, state, dout, synced);
+	
+	always @(state) begin
+		if (state == 6) begin
+			t = t + 1;
+			if (t == maxt + 1) $finish;
+			$fdisplay(dumpf, "frame %d", t);
+		end
+	end
+	
+	always @(posedge synced) begin
+		$fdisplay(dumpf, "%d", dout);
+	end
+
+endmodule

@@ -1,0 +1,63 @@
+# Reading pref.tcl
+# do LED_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {LED.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:23 on Nov 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." LED.vo 
+# -- Compiling module LED
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	LED
+# End time: 18:43:23 on Nov 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/MACHENIKE/Desktop/LED/simulation/modelsim {C:/Users/MACHENIKE/Desktop/LED/simulation/modelsim/LED.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:23 on Nov 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/MACHENIKE/Desktop/LED/simulation/modelsim" C:/Users/MACHENIKE/Desktop/LED/simulation/modelsim/LED.vt 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 18:43:23 on Nov 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" tb 
+# Start time: 18:43:24 on Nov 11,2021
+# Loading work.tb
+# Loading work.LED
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : C:/Users/MACHENIKE/Desktop/LED/simulation/modelsim/LED.vt(27)
+#    Time: 25815150 ns  Iteration: 6  Instance: /tb
+# End time: 18:44:24 on Nov 11,2021, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 0
